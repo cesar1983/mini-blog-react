@@ -1,0 +1,29 @@
+.Blog nav {
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  background-color: #000;
+}
+
+.Blog nav ul {
+  display: flex;
+  justify-content: space-around;
+}
+
+.Blog nav li {
+  list-style: none;
+}
+
+.Blog nav a {
+  font-size: 1.2em;
+  padding: 10px 20px;
+  display: block;
+  text-decoration: none;
+  color: #fff;
+}
+
+.Blog nav a:hover,
+.Blog nav a:active,
+.Blog nav a.active {
+  color: orange;
+}
