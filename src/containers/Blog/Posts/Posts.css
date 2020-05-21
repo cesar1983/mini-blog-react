@@ -1,37 +1,14 @@
-.Posts {
-  width: 80%;
-  margin: 60px auto;
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
-  align-items: stretch;
+.Posts-Content {
+  margin: 80px auto;
+  padding: 0 5em;
 }
 
-.Post {
-  width: 250px;
-  padding: 16px;
-  text-align: center;
-  border: 1px solid #eee;
-  box-shadow: 0 2px 3px #ccc;
-  box-sizing: border-box;
-  margin: 10px auto;
-  cursor: pointer;
-  display: table-cell;
-  height: 180px;
-}
-
-.Post:hover,
-.Post:active {
-  background-color: lightsalmon;
-}
-
-.Author {
-  margin: 26px 0;
-  font-size: 1.6em;
-}
-
-@media all and (max-width: 40em) {
-  .Post {
-    width: 100%;
+@media screen and (min-width: 82em) {
+  .Posts-Content {
+    max-width: 82em;
   }
+}
+.Posts {
+  display: flex;
+  flex-wrap: wrap;
 }

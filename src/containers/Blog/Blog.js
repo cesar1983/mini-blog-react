@@ -16,7 +16,7 @@ class Blog extends Component {
             <ul>
               <li>
                 <NavLink to="/" exact activeClassName="active">
-                  Home
+                  Posts
                 </NavLink>
               </li>
               <li>
@@ -46,10 +46,10 @@ class Blog extends Component {
             </div>
           )}
         /> */}
+        <Route path="/" exact component={Posts} />
         <Switch>
-          <Route path="/" exact component={Posts} />
           <Route path="/new-post" exact component={NewPost} />
-          <Route path="/post/:id" exact component={FullPost} />
+          <Route path="/posts/:id" exact component={FullPost} />
         </Switch>
       </div>
     );

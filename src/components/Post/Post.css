@@ -1,3 +1,37 @@
+.Post {
+  flex: 1 0 250px;
+  box-sizing: border-box;
+  margin: 0.4rem 0.4em;
+  padding: 16px;
+  text-align: center;
+  border: 1px solid #eee;
+  box-shadow: 0 2px 3px #ccc;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 40em) {
+  .Post {
+    max-width: calc(50% - 1em);
+  }
+}
+
+@media screen and (min-width: 60em) {
+  .Post {
+    max-width: calc(25% - 1em);
+  }
+}
+
+.Post:hover,
+.Post:active {
+  background-color: lightsalmon;
+}
+
+@media all and (max-width: 40em) {
+  .Post {
+    width: 100%;
+  }
+}
+
 .Author {
   margin: 26px 0;
   font-size: 1.6em;
