@@ -5,7 +5,22 @@
   box-sizing: border-box;
   text-align: center;
   padding: 16px;
-  margin: 20px auto;
+  margin: 100px auto;
+}
+
+.FullPost h1 {
+  height: 50px;
+}
+
+.FullPost p {
+  font-size: 1.4em;
+  text-indent: 1.5em;
+  text-align: justify;
+  margin: 20px 0;
+  padding-left: ;
+}
+.FullPost p::first-letter {
+  text-transform: capitalize;
 }
 
 .Edit {

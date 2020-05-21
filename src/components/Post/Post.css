@@ -1,28 +1,4 @@
-.Post {
-  width: 250px;
-  padding: 16px;
-  text-align: center;
-  border: 1px solid #eee;
-  box-shadow: 0 2px 3px #ccc;
-  box-sizing: border-box;
-  margin: 10px auto;
-  cursor: pointer;
-  display: table-cell;
-  height: 180px;
-}
-
-.Post:hover,
-.Post:active {
-  background-color: lightsalmon;
-}
-
 .Author {
   margin: 26px 0;
   font-size: 1.6em;
-}
-
-@media all and (max-width: 40em) {
-  .Post {
-    width: 100%;
-  }
 }
