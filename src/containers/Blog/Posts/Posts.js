@@ -1,8 +1,9 @@
 import React, { Component } from "react";
 import axios from "../../../axios";
-// import { Link } from "react-router-dom";
+import { Route } from "react-router-dom";
 
 import Post from "../../../components/Post/Post";
+import FullPost from "../FullPost/FullPost";
 
 import "./Posts.css";
 
@@ -34,7 +35,7 @@ class Posts extends Component {
   }
 
   handlePostClick = (postId) => {
-    this.props.history.push("posts/" + postId);
+    this.props.history.push("/posts/" + postId);
   };
 
   render() {
@@ -55,6 +56,11 @@ class Posts extends Component {
     return (
       <div className="Posts-Content">
         <section className="Posts">{posts}</section>
+        <Route
+          path={this.props.match.url + "/:id"}
+          exact
+          component={FullPost}
+        />
       </div>
     );
   }
