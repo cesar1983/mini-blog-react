@@ -4,9 +4,19 @@ import "./Blog.css";
 import { Route, NavLink, Switch, Redirect } from "react-router-dom";
 
 import Posts from "./Posts/Posts";
-import NewPost from "./NewPost/NewPost";
+//import NewPost from "./NewPost/NewPost";
+
+// Componente criado para Lazy Loading, de forma assincrona
+import asyncComponent from "../../hoc/asyncComponent";
+const AsyncNewPost = asyncComponent(() => {
+  return import("./NewPost/NewPost"); // New post quase nunca é acessado, então só é carregado quando precisa.
+});
 
 class Blog extends Component {
+  state = {
+    auth: true,
+  };
+
   render() {
     return (
       <div className="Blog">
@@ -45,8 +55,14 @@ class Blog extends Component {
           )}
         /> */}
         <Switch>
-          <Route path="/new-post" exact component={NewPost} />
+          {/* Guard ( autorização ) */}
+          {this.state.auth ? (
+            <Route path="/new-post" component={AsyncNewPost} />
+          ) : null}
+
+          {/* Guard option  , se quiser bloquear tudo que nao tem PATH */}
           <Route path="/posts" component={Posts} />
+          <Route render={() => <h1>Not Found</h1>} />
           <Redirect from="/" to="/posts" />
           {/* <Route path="/" component={Posts} /> */}
         </Switch>
