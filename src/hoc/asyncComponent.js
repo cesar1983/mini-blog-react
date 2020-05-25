@@ -6,6 +6,8 @@ import React, { Component } from "react";
  * Quando algum componente não precisa ser carregado no chunk principal,
  * isso pode ser útil pra ter um app de carregamento mais rápido.
  *
+ * Pode ser feito usando React Suspense a partir do React 16.6
+ *
  * @param {*} importComponent
  */
 const asyncComponent = (importComponent) => {
