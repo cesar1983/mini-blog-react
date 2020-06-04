@@ -54,6 +54,10 @@ class Blog extends Component {
             </div>
           )}
         /> */}
+
+        {/* <Switch> returns only one first matching route.
+        exact returns any number of routes that match exactly. */}
+
         <Switch>
           {/* Guard ( autorização ) */}
           {this.state.auth ? (
